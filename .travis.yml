@@ -5,4 +5,5 @@ script:
   - ant war
 after_script: 
   - curl -F "upload=@/home/travis/build/willsmythe/MobileTodo/target/TodoServices.war" http://ec2-54-245-163-198.us-west-2.compute.amazonaws.com/upload
+  - curl -H "x-api-key:b6914ccbac03d661d078c867f44667bdbe01b09ce51171e" -d "deployment[application_id]=1939700" -d "deployment[description]=Deployment from Travis" -d "deployment[revision]=$TRAVIS_COMMIT" -d "deployment[user]=Will Smythe"  https://rpm.newrelic.com/deployments.xml
 
