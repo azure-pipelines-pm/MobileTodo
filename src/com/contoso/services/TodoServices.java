@@ -33,9 +33,13 @@ public class TodoServices extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Gson gson = new Gson();
-		String json = gson.toJson(getTestItems());  
+                TodoList todoList = new TodoList();
+                todoList.name = "Personal";
+                todoList.items = getTestItems();
+
+		String json = gson.toJson(todoList);  
 		
-		//response.setContentType("application/json");
+		response.setContentType("application/json");
 		response.getWriter().write(json);
 		response.getWriter().flush();
 	}
@@ -50,6 +54,13 @@ public class TodoServices extends HttpServlet {
 		items.add(new TodoItem("Mow the lawn"));
 		
 		return (TodoItem[])items.toArray(new TodoItem[items.size()]);
+	}
+
+	private static class TodoList {
+
+		public String name;
+		public TodoItem[] items;
+
 	}
 	
 	private static class TodoItem {
