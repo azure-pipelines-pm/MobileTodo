@@ -1,5 +1,4 @@
 language: java
-install: ant install-deps
 jdk:
   - oraclejdk7
 script:
