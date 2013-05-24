@@ -1,11 +1,21 @@
 <html>
 <head>
 <title>Your to-do list</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script
+
+<script src="js/jquery-2.0.1.min.js"></script>
+
 <style>
 
-* {
+body, p, table, h2 {
 	font-family: "Segoe UI", "Tahoma", arial, sans-serif;
+}
+
+table {
+	font-size: 20pt;
+}
+
+h2 {
+	font-size: 32pt;
 }
 
 </style>
@@ -14,13 +24,24 @@
 
 <h2>Your todo list</h2>
 
-<table>
+<table border=1 padding=6 id="todos">
 <tr>
 <th width=50>&nbsp;<th width=400>Task
 </tr>
-
 </table>
 
-</body>
+<script>
 
+$(document).ready(function () {
+      $.get("/TodoServices/todos", function (data, status, xhr) {
+ 	   for (var i = 0; i < data.length; i++) {
+               var todo = data[i];
+               $('#todos').append('<tr><td><input type=\"checkbox\"></td><td>' + todo.name + '</td></tr>');
+           }
+      });
+} );
+
+</script>
+
+</body>
 </html>
