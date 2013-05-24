@@ -41,7 +41,8 @@ public class TodoServices extends HttpServlet {
 	
 	private TodoItem[] getTestItems() {
 		List items = new ArrayList();
-		
+
+		items.add(new TodoItem("Get deployment with ANT to work"));		
 		items.add(new TodoItem("Get AWS deployment to work v2"));
 		items.add(new TodoItem("Deliver paper"));
 		items.add(new TodoItem("Pick up milk"));
