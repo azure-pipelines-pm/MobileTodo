@@ -27,20 +27,18 @@ h2 {
 
 <body>
 
-<h2>Your todo list</h2>
+<h2>Today's tasks</h2>
 
 <table border=0 cellpadding=6 id="todos" cellspacing=1>
-<tr>
-<th width=50>&nbsp;<th width=400>Task
-</tr>
+
 </table>
 
 <script>
 
 $(document).ready(function () {
       $.get("/TodoServices/todos", function (data, status, xhr) {
- 	   for (var i = 0; i < data.length; i++) {
-               var todo = data[i];
+ 	   for (var i = 0; i < data.items.length; i++) {
+               var todo = data.items[i];
                $('#todos').append('<tr><td><input type=\"checkbox\"></td><td>' + (todo.name ? todo.name : 'NULL' ) + '</td></tr>');
            }
       });
