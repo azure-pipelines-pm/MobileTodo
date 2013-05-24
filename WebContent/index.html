@@ -12,6 +12,11 @@ body, p, table, h2 {
 
 table {
 	font-size: 20pt;
+	background-color: lightgray;
+}
+
+td {
+	background-color: white;
 }
 
 h2 {
@@ -24,7 +29,7 @@ h2 {
 
 <h2>Your todo list</h2>
 
-<table border=1 padding=6 id="todos">
+<table border=0 cellpadding=6 id="todos" cellspacing=1>
 <tr>
 <th width=50>&nbsp;<th width=400>Task
 </tr>
@@ -36,7 +41,7 @@ $(document).ready(function () {
       $.get("/TodoServices/todos", function (data, status, xhr) {
  	   for (var i = 0; i < data.length; i++) {
                var todo = data[i];
-               $('#todos').append('<tr><td><input type=\"checkbox\"></td><td>' + todo.name + '</td></tr>');
+               $('#todos').append('<tr><td><input type=\"checkbox\"></td><td>' + (todo.name ? todo.name : 'NULL' ) + '</td></tr>');
            }
       });
 } );
