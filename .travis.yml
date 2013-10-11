@@ -4,7 +4,7 @@ jdk:
 script:
   - ant war
 after_script: 
-  - curl -F "upload=@/home/travis/build/willsmythe/MobileTodo/target/TodoServices.war" http://ec2-54-214-97-108.us-west-2.compute.amazonaws.com/upload
+  - curl -F "upload=@/home/travis/build/willsmythe/MobileTodo/target/TodoServices.war" http://ec2-54-202-130-7.us-west-2.compute.amazonaws.com/upload
   - curl -H "x-api-key:0c260a721297437c5edc57a649aa27a75e0ebdb5e2432d1" -d "deployment[application_id]=1925408" -d "deployment[description]=Deployment from Travis https://github.com/chrispattersonorg/MobileTodo/commit/$TRAVIS_COMMIT" -d "deployment[revision]=$TRAVIS_COMMIT" https://rpm.newrelic.com/deployments.xml
   - curl -H "loaderio-auth:66cf196211ba8195416a587457fd23d1" https://api.loader.io/v2/tests/da0d0414e4f8dc6b5c4bb6ac36d94baf/run -X PUT
 notifications:
