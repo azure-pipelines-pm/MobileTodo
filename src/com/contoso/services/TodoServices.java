@@ -68,12 +68,12 @@ public class TodoServices extends HttpServlet {
 		
 		public TodoItem(String name) {
 			this.id = ((int)Math.random() * 12300) + "";
-			this.name = name;
+			this.name2 = name;
 			this.createdAt = new Date();
 		}
 		
 		public String id;
-		public String name;
+		public String name2;
 		public Date createdAt;		
 				
 	}
