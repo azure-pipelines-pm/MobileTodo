@@ -41,6 +41,7 @@ public class TodoServices extends HttpServlet {
 		String json = gson.toJson(todoList);  
 		
 		response.setContentType("application/json");
+        response.setHeader("Access-Control-Allow-Origin", "*");
 		response.getWriter().write(json);
 		response.getWriter().flush();
 	}
