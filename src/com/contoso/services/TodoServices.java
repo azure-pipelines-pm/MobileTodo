@@ -31,7 +31,7 @@ public class TodoServices extends HttpServlet {
 		Gson gson = new Gson();
                 TodoList todoList = new TodoList();
                 todoList.name = "Personal";
-                todoList.color = "yellow";
+                todoList.color = "cyan";
                 todoList.items = getTestItems();
 
 		String json = gson.toJson(todoList);  
@@ -48,7 +48,7 @@ public class TodoServices extends HttpServlet {
 		items.add(new TodoItem("Get tickets for the game"));
 		items.add(new TodoItem("Mail package"));
 		items.add(new TodoItem("Pick up milk"));
-		items.add(new TodoItem("Mow the lawn"));
+		items.add(new TodoItem("Pickup the kids"));
 		
 		return (TodoItem[])items.toArray(new TodoItem[items.size()]);
 	}
