@@ -45,10 +45,12 @@ public class TodoServices extends HttpServlet {
 	private TodoItem[] getTestItems() {
 		List items = new ArrayList();
 
+		
 		items.add(new TodoItem("Get tickets for the game"));
 		items.add(new TodoItem("Mail package"));
-		items.add(new TodoItem("Pick up milk"));
-		items.add(new TodoItem("Mow the lawn"));
+		items.add(new TodoItem("Feed the cows"));
+		items.add(new TodoItem("Support Windows"));
+		
 		
 		return (TodoItem[])items.toArray(new TodoItem[items.size()]);
 	}
