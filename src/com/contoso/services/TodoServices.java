@@ -1,16 +1,12 @@
-/* a simple change */
+/* Todo service */
 package com.contoso.services;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 
 import com.google.gson.Gson;
 
@@ -26,7 +22,6 @@ public class TodoServices extends HttpServlet {
      */
     public TodoServices() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -36,11 +31,13 @@ public class TodoServices extends HttpServlet {
 		Gson gson = new Gson();
                 TodoList todoList = new TodoList();
                 todoList.name = "Personal";
+                todoList.color = "green";
                 todoList.items = getTestItems();
 
 		String json = gson.toJson(todoList);  
 		
 		response.setContentType("application/json");
+        response.setHeader("Access-Control-Allow-Origin", "*");
 		response.getWriter().write(json);
 		response.getWriter().flush();
 	}
@@ -48,10 +45,12 @@ public class TodoServices extends HttpServlet {
 	private TodoItem[] getTestItems() {
 		List items = new ArrayList();
 
+		
 		items.add(new TodoItem("Get tickets for the game"));
 		items.add(new TodoItem("Mail package"));
-		items.add(new TodoItem("Pick up milk"));
-		items.add(new TodoItem("Mow the lawn"));
+		items.add(new TodoItem("Feed the cows"));
+		items.add(new TodoItem("Support Windows"));
+		
 		
 		return (TodoItem[])items.toArray(new TodoItem[items.size()]);
 	}
@@ -59,8 +58,9 @@ public class TodoServices extends HttpServlet {
 	private static class TodoList {
 
 		public String name;
-		public TodoItem[] items;
-
+		public String color;
+        public TodoItem[] items;
+        
 	}
 	
 	private static class TodoItem {
