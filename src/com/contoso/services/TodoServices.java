@@ -32,7 +32,7 @@ public class TodoServices extends HttpServlet {
                 TodoList todoList = new TodoList();
                 todoList.name = "Personal";
                 todoList.color = "blue";
-                
+             
                 todoList.items = getTestItems();
 
 		String json = gson.toJson(todoList);  
