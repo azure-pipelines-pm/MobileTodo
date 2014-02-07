@@ -50,7 +50,7 @@ public class TodoServices extends HttpServlet {
 		items.add(new TodoItem("Get tickets for the game"));
 		items.add(new TodoItem("Mail package"));
 		items.add(new TodoItem("Milk the cows"));
-		items.add(new TodoItem("Pickup the kids!!!"));
+		items.add(new TodoItem("build a new engimeering"));
 		
 		
 		
