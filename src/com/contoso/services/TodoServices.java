@@ -31,7 +31,7 @@ public class TodoServices extends HttpServlet {
 		Gson gson = new Gson();
                 TodoList todoList = new TodoList();
                 todoList.name = "Personal";
-                todoList.color = "blue";
+                todoList.color = "red";
              
                 todoList.items = getTestItems();
 
