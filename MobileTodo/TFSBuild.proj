@@ -116,9 +116,9 @@
 
   <!-- This target is called at the very begining of the build process to log
    the build extensions version -->
-  <Target Name="BeforeInitializeWorkspace">
+ <!-- <Target Name="BeforeEndToEndIteration">
     <VerifyBuildExtensionsVersion  TeamProjectCollectionUrl="$(TeamFoundationServerUrl)" RequiredVersion="12.0.21121.0" /> 
-  </Target>
+  </Target> -->
 
   <ItemGroup>
     <!--  Maven 2 Call Configuration.
