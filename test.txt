@@ -1,12 +1,23 @@
+ Volume in drive C is OSDisk
+ Volume Serial Number is C6CF-B317
 
-asdf
-Mon 01/06/2014 
-Mon 01/06/2014 
+ Directory of C:\work\MobileTodo
 
-asdf
-asdf
-adsf
-
-asdf
-
-asdf
+02/20/2014  09:28 PM    <DIR>          .
+02/20/2014  09:28 PM    <DIR>          ..
+12/17/2013  09:30 AM             1,115 .classpath
+07/13/2013  10:51 PM                17 .gitignore
+07/13/2013  10:51 PM             1,222 .project
+12/17/2013  09:30 AM    <DIR>          .settings
+12/17/2013  09:30 AM               689 .travis.yml
+07/13/2013  10:51 PM               945 build.xml
+02/20/2014  09:28 PM    <DIR>          MobileTodo
+12/17/2013  09:30 AM             1,553 pom.xml
+07/13/2013  10:51 PM               614 postbuild.sh
+12/17/2013  09:30 AM    <DIR>          src
+01/10/2014  12:38 PM    <DIR>          target
+03/06/2014  11:08 PM                 0 test.txt
+07/13/2013  10:51 PM    <DIR>          tools
+12/17/2013  09:30 AM    <DIR>          WebContent
+               8 File(s)          6,155 bytes
+               8 Dir(s)  20,292,751,360 bytes free
