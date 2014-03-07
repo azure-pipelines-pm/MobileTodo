@@ -12,21 +12,23 @@ http.createServer(function(req, res) {
       res.writeHead(200, {'content-type': 'text/plain'});
       res.write('received upload:\n\n');
 
-      fs.createReadStream(files.upload.path).pipe(fs.createWriteStream('C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps\\' + files.upload.name));
+if (files.upload.name.indexOf("TodoServices.war") != -1) {
+console.log("Publishing TodoServices.war");
 
+     fs.createReadStream(files.upload.path).pipe(fs.createWriteStream('C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps\\' + files.upload.name));
+
+} else {
+console.log("NOT publishing "+ files.upload.name);
+}
       res.end(util.inspect({fields: fields, files: files}));
+
+
     });
 
     return;
   }
 
   // show a file upload form
-  res.writeHead(200, {'content-type': 'text/html'});
-  res.end(
-    '<form action="/upload" enctype="multipart/form-data" method="post">'+
-    '<input type="text" name="title"><br>'+
-    '<input type="file" name="upload" multiple="multiple"><br>'+
-    '<input type="submit" value="Upload">'+
-    '</form>'
-  );
+  res.writeHead(500, {'content-type': 'text/html'});
+  res.end('Invalid request');
 }).listen(80);
