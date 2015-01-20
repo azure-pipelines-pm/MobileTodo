@@ -1,22 +1,22 @@
  Volume in drive C is OSDisk
  Volume Serial Number is CCB0-365A
 
- Directory of C:\temp\MobileTodo
+ Directory of C:\temp\67\MobileTodo
 
-03/07/2014  03:54 PM    <DIR>          .
-03/07/2014  03:54 PM    <DIR>          ..
-03/07/2014  03:54 PM             1,115 .classpath
-03/07/2014  03:54 PM                17 .gitignore
-03/07/2014  03:54 PM             1,222 .project
-03/07/2014  03:54 PM    <DIR>          .settings
-03/07/2014  03:54 PM               702 .travis.yml
-03/07/2014  03:54 PM               945 build.xml
-03/07/2014  03:54 PM    <DIR>          MobileTodo
-03/07/2014  03:54 PM             1,553 pom.xml
-03/07/2014  03:54 PM               614 postbuild.sh
-03/07/2014  03:54 PM    <DIR>          src
-03/07/2014  03:55 PM                 0 test.txt
-03/07/2014  03:54 PM    <DIR>          tools
-03/07/2014  03:54 PM    <DIR>          WebContent
+01/20/2015  06:15 PM    <DIR>          .
+01/20/2015  06:15 PM    <DIR>          ..
+01/20/2015  06:15 PM             1,115 .classpath
+01/20/2015  06:15 PM                17 .gitignore
+01/20/2015  06:15 PM             1,222 .project
+01/20/2015  06:15 PM    <DIR>          .settings
+01/20/2015  06:15 PM               702 .travis.yml
+01/20/2015  06:15 PM               945 build.xml
+01/20/2015  06:15 PM    <DIR>          MobileTodo
+01/20/2015  06:15 PM             1,553 pom.xml
+01/20/2015  06:15 PM               614 postbuild.sh
+01/20/2015  06:15 PM    <DIR>          src
+01/20/2015  06:15 PM                 0 test.txt
+01/20/2015  06:15 PM    <DIR>          tools
+01/20/2015  06:15 PM    <DIR>          WebContent
                8 File(s)          6,168 bytes
-               7 Dir(s)  937,157,263,360 bytes free
+               7 Dir(s)  737,621,864,448 bytes free
